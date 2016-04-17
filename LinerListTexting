@@ -1,0 +1,23 @@
+#include"List.h"
+using namespace std;
+void main(void)
+{
+	CLinearList<int> myList(5);
+	cout << "线性表长度为：" << myList.Length() << endl;
+	cout << "IsEmpty =" << myList.IsEmpty() << endl;
+	cout << "Length = " << myList.Length() << endl;
+	myList.Insert(0, 2).Insert(1, 10).Insert(2, 49);
+
+	cout << "IsEmpty =" << myList.IsEmpty() << endl;
+	cout << "List is" << myList << endl;
+	cout << "Length = " << myList.Length() << endl;
+
+	int z;
+	myList.Find(1, z);
+	cout << "位置为1的元素为：" << z << endl;
+	myList.Delete(2, z);
+	cout << "Deleted element is" << z << endl;
+	cout << "List is " << myList << endl;
+	cout << "Length = " << myList.Length() << endl;
+	//system("pause");
+}
